@@ -1,0 +1,18 @@
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0 ;
+    color: rgb(124, 122, 122);
+}
+
+#NavList{
+    margin-left:2rem;
+    display: flex;
+}
+
+#NavList a{
+  text-decoration: none;
+   margin-left:2rem;
+    color: rgb(124, 122, 122);
+}
