@@ -29,9 +29,9 @@ export default function Explore(){
     return(
           <div>
         {
-            AllPost.map((post)=>{
+            AllPost.map((post,i)=>{
                 return(
-                    <div>
+                    <div key={i}>
                         <img height={100} src={post.PostImage} />
                         <p>{post.caption}</p>
                     </div>
