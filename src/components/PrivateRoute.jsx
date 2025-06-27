@@ -11,12 +11,12 @@ export default function PrivateRoute({ UserData, Component }) {
   useEffect(() => {
 
     //// Jab component render ho jaye, tab check karo user login hai ya nahi
-    if (!UserData) {
+    if (UserData === null) {
       navigate("/login");
     }
   },
   // Jab component render ho jaye, tab check karo user login hai ya nahi
-   [UserData, navigate]);
+   [UserData]);
 
   if (!UserData) {
     return null;

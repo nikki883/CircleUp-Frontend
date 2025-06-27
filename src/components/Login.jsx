@@ -10,17 +10,19 @@ export default function Login({ setUserData }){
          e.preventDefault();
 
          const email = e.target.email.value;
-
+         const password  = e.target.password.value;
+         console.log(email,password);
          const res = await axios.post("http://localhost:5500/api/users/login",{
             email,
+            password
          })
 
          if(res.status == 200)
         {
-            console.log(res.data,"data aaya")
+            console.log("user ki id " ,res.data._id,"data aaya")
             setUserData(res.data);
             localStorage.setItem("User", JSON.stringify(res.data));
-            navigate("/");
+            navigate("/profile");
         }
         else
         {
@@ -46,7 +48,10 @@ export default function Login({ setUserData }){
                         />
                         <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-400/20 to-blue-400/20 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                     </div>
-                    
+                    <label htmlFor="password">Password</label>
+                    <br/>
+                    <input type="password" placeholder="password" name="password"/>
+                    <br/>
                     <button 
                        type="submit"
                         className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50 active:scale-95"
