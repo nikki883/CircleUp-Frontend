@@ -1,0 +1,167 @@
+.explore-container {
+  max-width: 614px;
+  margin: 80px auto 0;
+  padding: 0 20px;
+}
+
+.posts-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.post-card {
+  background: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.post-header {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #262626;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.post-time {
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+.post-image-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.post-content {
+  padding: 16px;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.1s;
+}
+
+.action-btn:hover {
+  transform: scale(1.1);
+}
+
+.likes-count {
+  font-weight: 600;
+  font-size: 14px;
+  color: #262626;
+  margin-left: auto;
+}
+
+.post-caption {
+  font-size: 14px;
+  color: #262626;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.post-caption strong {
+  font-weight: 600;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.empty-title {
+  font-size: 22px;
+  font-weight: 300;
+  color: #262626;
+  margin: 0 0 8px 0;
+}
+
+.empty-description {
+  color: #8e8e8e;
+  font-size: 14px;
+  margin: 0;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #dbdbdb;
+  border-top: 2px solid #0095f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .explore-container {
+    padding: 0;
+    margin-top: 60px;
+  }
+
+  .post-card {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
